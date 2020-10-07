@@ -7,9 +7,9 @@ class mainapp(tk.Tk):
         tk.Tk.__init__(self, *args)
         self.title ('Tic Tac Toe V1.0')
         self.update()
+        
 #         After forcing the instance to update,
 #         determine the width of the screen and window borders.
-
         self.width = int(self.winfo_screenwidth())*0.4
         self.screenwidth = int(self.winfo_screenwidth())
         self.x_border = int(self.winfo_rootx() -self.winfo_x())
@@ -47,7 +47,7 @@ class mainapp(tk.Tk):
                            command =self.restart)
         restart.grid(row =1, column =0, sticky ='ew')
         
-#         Row:Colum coordinates of the diagonal places.
+#         Row:Column coordinates of the diagonal places.
         mainapp.diagonal1 ={1:0,2:1,3:2}
         mainapp.diagonal2 ={3:0,2:1,1:2}
 #         Need to handle X's and O's separately.
